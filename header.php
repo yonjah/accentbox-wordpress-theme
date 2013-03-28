@@ -3,23 +3,23 @@
 <?php $options = get_option('accentbox'); ?>
 <head>
 	<meta charset="UTF-8">
-	
+
 	<title><?php wp_title(''); ?></title>
-	
+
 	<?php if ($options['mts_favicon'] != '') { ?>
 	<link rel="icon" href="<?php echo $options['mts_favicon']; ?>" type="image/x-icon" />
 	<?php } ?>
-	
-	<!--iOS/android/handheld specific -->	
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">			
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">						
+
+	<!--iOS/android/handheld specific -->
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-	
+
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 	<?php wp_enqueue_script("jquery"); ?>
@@ -27,12 +27,12 @@
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	
+
 	<?php wp_head(); ?>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/customscript.js" type="text/javascript"></script>
-	
+
 	<style type="text/css">
 		<?php if ($options['mts_logo'] != '') { ?>
 			#header h1, #header h2 {
@@ -80,7 +80,7 @@
 		<header class="main-header">
 		<div class="container">
 				<div id="header">
-				
+
 					<?php if( is_front_page() || is_home() || is_404() ) { ?>
 							<h1 id="logo">
 								<a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a>
@@ -95,8 +95,8 @@
 				</div><!--#header-->
 		</div><!--.container-->
 		</header>
-		<div class="container">
 		<div class="secondary-navigation">
+			<div class="container">
 				<nav id="navigation" >
 					<?php if ( has_nav_menu( 'primary-menu' ) ) { ?>
 						<?php wp_nav_menu( array( 'theme_location' => 'primary-menu', 'menu_class' => 'menu', 'container' => '' ) ); ?>
